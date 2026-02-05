@@ -324,45 +324,43 @@
         }
 
         /* Timeline Styles */
+        
+
         .timeline {
             position: relative;
-            padding: 20px 0;
-            padding-left: 12px;
+            padding: 12px 0 40px 0;     /* reduced top/bottom padding + explicit left */
+            margin-left: 8px;           /* pulls whole timeline slightly left */
         }
 
         .timeline:before {
             content: '';
             position: absolute;
-            left: 14px;
+            left: 12px;                 /* ← moved much closer to left edge */
             top: 0;
             bottom: 0;
-            width: 4px;
+            width: 5px;                 /* slightly thicker so it's very obvious */
             background: linear-gradient(to bottom, 
-                var(--primary-pink) 0%, 
-                var(--accent-yellow) 25%,
-                var(--accent-turquoise) 50%,
-                var(--accent-purple) 75%,
-                var(--secondary-coral) 100%);
-            border-radius: 2px;
+                #FF1493 0%, #FFCC80 25%, #06D6A0 50%, #9B59B6 75%, #FF6B6B 100%);
+            border-radius: 3px;
+            z-index: 0;
         }
 
         .timeline-item {
             position: relative;
-            padding-left: 48px;
-            margin-bottom: 40px;
+            padding-left: 38px !important;   /* ← much smaller left padding = wider cards */
+            margin-bottom: 44px;
         }
 
         .timeline-dot {
             position: absolute;
-            left: 4px;
-            top: 0;
-            width: 24px;
-            height: 24px;
+            left: 0px;                  /* ← almost touching the new line position */
+            top: 4px;
+            width: 28px;
+            height: 28px;
             border-radius: 50%;
             background: linear-gradient(135deg, #FF1493, #FFCC80);
-            border: 4px solid white;
-            box-shadow: 0 0 0 3px rgba(255, 20, 147, 0.3),
-                        0 4px 12px rgba(255, 20, 147, 0.4);
+            border: 5px solid white;
+            box-shadow: 0 0 0 4px rgba(255, 20, 147, 0.4);
             z-index: 1;
             animation: pulse 2s infinite;
         }
@@ -816,15 +814,25 @@
                     <div class="timeline-date">6th February 2023</div>
                     <div class="timeline-content">
                         <h3>🌟 Welcome to the World!</h3>ِ
-                        <p class="urdu-text" style="margin-top: 1px;"> چاچا عدہل کے ساتھ ❤️ </p>
+                        <!-- <p class="urdu-text" style="margin-top: 1px;"> چاچا عدہل کے ساتھ ❤️ </p> -->
                         <!-- <p>The day our little princess arrived and filled our lives with endless joy and love.</p> -->
                         <div class="media-grid" style="margin-top: 20px;">
+
                             <div class="media-item" onclick="openModal(this)">
-                                <img src="images/photo1.JPG" alt="First Birthday Celebration">
-                                <div class="media-caption"><strong>First Day 👶</strong><p class="urdu-text">زندگی کا پہلا دن</p></div></div>
+                                <p class="urdu-text" style="margin-top: 6px; margin-bottom: 10px; margin-right: 1px;"> چاچا عدہل کے ساتھ ❤️ </p>
+                                <img src="images/photo1.JPG" alt="Birthday Celebration">
+                                <div class="media-caption"><strong>First Day 👶🏻</strong><p class="urdu-text">زندگی کا پہلا دن</p></div></div>
+
                             <div class="media-item" onclick="openModal(this)">
-                                <img src="images/photo2.JPG" alt="First Birthday Celebration">
-                                <div class="media-caption"><strong>With Family ❤️</strong><p class="urdu-text">خاندان کے ساتھ</p></div></div>
+                                <p class="urdu-text" style="margin-top: 6px; margin-bottom: 10px; margin-right: 1px;"> 👶🏻 ❤️ </p>
+                                <img src="images/photo2.JPG" alt="Birthday Celebration">
+                                <div class="media-caption"></div></div>
+
+                            <div class="media-item" onclick="openModal(this)">
+                                <p class="urdu-text" style="margin-top: 6px; margin-bottom: 10px; margin-right: 1px;"> ابو کے ساتھ 💕 </p>
+                                <img src="images/photo3.JPG" alt="Birthday Celebration">
+                                <div class="media-caption"><strong>❤️</strong><p class="urdu-text">خاندان کے ساتھ</p></div></div>
+
                         </div>
                     </div>
                 </div>
