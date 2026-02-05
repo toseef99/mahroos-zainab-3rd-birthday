@@ -732,6 +732,33 @@
             pointer-events: none;
         }
 
+        /* Try to theme the controls pink-ish (works best in Chrome/Safari/Edge) */
+        .birthday-audio::-webkit-media-controls-panel {
+            background: rgba(255, 20, 147, 0.65) !important;  /* semi-transparent hot pink */
+            border-radius: 0 0 12px 12px;
+        }
+
+        .birthday-audio::-webkit-media-controls-play-button,
+        .birthday-audio::-webkit-media-controls-volume-slider {
+            filter: brightness(1.15) drop-shadow(0 1px 2px rgba(0,0,0,0.4));
+        }
+
+        .birthday-audio::-webkit-media-controls-current-time-display,
+        .birthday-audio::-webkit-media-controls-time-remaining-display {
+            color: white !important;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.6);
+        }
+
+        .birthday-audio::-webkit-media-controls-timeline {
+            background: rgba(255,255,255,0.35);
+            border-radius: 8px;
+        }
+
+        /* Fallback nice look for Firefox/others */
+        audio {
+            outline: none;
+        }
+
         .share-btn:hover .label {
             opacity: 1;
         }
@@ -861,14 +888,17 @@
 
                             
                             <div class="media-item" onclick="openModal(this)">
+                                <p class="urdu-text" style="margin-top: 6px; margin-bottom: 10px; margin-right: 1px;"> پھول 🌷 </p>
                                 <img src="images/photo5.JPG" alt="Birthday Celebration">
                                 <div class="media-caption"><strong>First Birthday 🎂</strong><p class="urdu-text">پہلی سالگرہ</p></div></div>
 
                             <div class="media-item" onclick="openModal(this)">
+                                <p class="urdu-text" style="margin-top: 6px; margin-bottom: 10px; margin-right: 1px;"> 🥰 </p>ھارع
                                 <img src="images/photo4.JPG" alt="Birthday Celebration">
                                 <div class="media-caption"><strong>Learning to Walk 👣</strong></div></div>
 
                             <div class="media-item" onclick="openModal(this)">
+                                <p class="urdu-text" style="margin-top: 6px; margin-bottom: 10px; margin-right: 1px;"> ❤️💕 </p>
                                 <img src="images/photo6.JPG" alt="Birthday Celebration">
                                 <div class="media-caption"><strong>Learning to Walk 👣</strong></div></div>
 
@@ -878,28 +908,46 @@
 
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                    <div class="timeline-date">Second Year</div>
+                    <div class="timeline-date">First Birthday 🎂 6-Feb-2024 </div>
                     <div class="timeline-content">
                         <h3>🎨 Discovering the World</h3>
-                        <p>Running around, exploring everything, asking "why?" a million times, and making us laugh every single day!</p>
-                        <p class="urdu-text" style="margin-top: 10px;">دنیا کو دریافت کرنا، کھیلنا، اور ہمیں ہر دن ہنسانا!</p>
                         <div class="media-grid" style="margin-top: 20px;">
-                            <div class="media-item" onclick="openModal(this)"><div class="placeholder"></div><div class="media-caption"><strong>Park Fun 🌳</strong><p class="urdu-text">پارک میں کھیلنا</p></div></div>
-                            <div class="media-item" onclick="openModal(this)"><div class="placeholder"></div><div class="media-caption"><strong>Second Birthday 🎉</strong><p class="urdu-text">دوسری سالگرہ</p></div></div>
+                            
+                            <div class="media-item" onclick="openModal(this)">
+                                <img src="images/photo7.JPG" alt="First Birthday Celebration">
+                                <div class="media-caption"><strong> ہمیشہ یہ مٗسکراہٹ قائم رہے❤️</strong>
+                                </div>
+                            </div>
+
+                            <div class="media-item" onclick="openModal(this)">
+                                <img src="images/photo8.JPG" alt="First Birthday Celebration">
+                                <div class="media-caption">
+                                    <strong>First Birthday 🎉</strong>
+                                    <p class="urdu-text">پہلی سالگرہ</p></div></div>
                         </div>
                     </div>
                 </div>
 
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                    <div class="timeline-date">Third Year</div>
+                    <div class="timeline-date"> 𝙈 𝙀 𝙈 𝙊 𝙍 𝙄 𝙀 𝙎 💕 𝘼 𝙇 𝙊 𝙉 𝙂 💕 𝙏 𝙃 𝙀 💕 𝙒 𝘼 𝙔</div>
                     <div class="timeline-content">
                         <h3>🌺 Growing & Glowing</h3>
-                        <p>Now you're THREE! So smart, so funny, so full of love. You make every day brighter just by being you!</p>
                         <p class="urdu-text" style="margin-top: 10px;">اب تم تین سال کی ہو! بہت ہوشیار، بہت پیاری، اور محبت سے بھری ہوئی۔</p>
                         <div class="media-grid" style="margin-top: 20px;">
-                            <div class="media-item" onclick="openModal(this)"><div class="placeholder"></div><div class="media-caption"><strong>Recent Adventures 🌟</strong><p class="urdu-text">حالیہ مہم جوئی</p></div></div>
-                            <div class="media-item" onclick="openModal(this)"><div class="placeholder"></div><div class="media-caption"><strong>Beautiful Smile 😊</strong><p class="urdu-text">خوبصورت مسکراہٹ</p></div></div>
+
+                            <!-- <div class="media-item" onclick="openModal(this)">
+                                <img src="images/photo11.JPG" alt="Memories">
+                            </div> -->
+
+
+                            <div class="media-item" onclick="openModal(this)">
+                                <img src="images/photo13.jpg" alt="Memories">
+                                <!-- <div class="media-caption">
+                                    <strong>Beautiful Smile 😊</strong>
+                                    <p class="urdu-text">خوبصورت مسکراہٹ</p>
+                                </div> -->
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -911,35 +959,58 @@
         <div class="section">
             <h2 class="section-title">💌 Birthday Wishes 💌</h2>
 
+            <!-- <div class="media-item" onclick="openModal(this)">
+                                <video controls preload="metadata" poster="images/video1-thumbnail.jpg" class="birthday-video">
+                                    <source src="./images/video1.MP4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video> -->
+
+            <!-- <div class="message-card">
+                <div class="author">from Nimra Zohab نمرہ زوہاب ❤️</div>
+                    <div class="video-wrapper">
+                        <video 
+                            controls 
+                            preload="metadata"
+                            class="birthday-video"
+                        >
+                            <source src="images/video2.MOV" type="video/MOV">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <p class="urdu-text" style="margin-top: 12px; font-size: 0.95em;">ہماری پیاری ماہ روش، یہ ویڈیو دیکھیں... 🥰</p>
+                </div> -->
+
+                <!-- <div class="media-item" onclick="openModal(this)">
+                                <video controls preload="metadata" poster="images/video1-thumbnail.jpg" class="birthday-video">
+                                    <source src="./images/video2.MOV" type="video/MOV">
+                                    Your browser does not support the video tag.
+                                </video>
+                
+                <audio controls preload="metadata" class="birthday-audio">
+                    <source src="images/mom-dad-message.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <p class="urdu-text" style="margin-top: 10px; font-size: 0.95em;">ہماری پیاری ماہ روش، یہ سنو... 🥰</p>
+            </div> -->
+
             <div class="message-card">
                 <div class="author">Mommy & Daddy 👨‍👩‍👧</div>
-                <div class="text">My dearest Mahroosh, you are our greatest blessing...</div>
-                <div class="urdu-text" style="margin-top: 12px;">ہماری پیاری ماہ روش، تم ہماری سب سے بڑی نعمت ہو...</div>
+                <div class="text">Our dearest Mahroosh Zainab, you are our greatest blessing 👸</div>
+                <div class="urdu-text" style="margin-top: 12px;">ہماری پیاری ماہ روش، تم ہماری سب سے بڑی نعمت ہو .</div>
             </div>
 
-            <div class="message-card">
-                <div class="author">Nana & Nani 👴👵</div>
-                <div class="text">Our sweet granddaughter, you bring so much sunshine...</div>
-                <div class="urdu-text" style="margin-top: 12px;">ہماری پیاری پوتی، تم ہماری زندگی میں بہت خوشیاں لاتی ہو...</div>
-            </div>
-
-            <div class="message-card">
-                <div class="author">All Your Family 💝</div>
-                <div class="text">Happy Birthday to the most adorable 3-year-old!...</div>
-                <div class="urdu-text" style="margin-top: 12px;">سب سے پیاری تین سال کی بچی کو سالگرہ مبارک!...</div>
-            </div>
         </div>
 
         <!-- Final Love Message -->
         <div class="section" style="background: var(--gradient-2); color: white; text-align: center; border: none; box-shadow: 8px 8px 0px rgba(6,214,160,0.35);">
             <h2 style="font-family: 'Fredoka', sans-serif; font-size: 2.1em; margin-bottom: 20px; font-weight: 800;">
-                We Love You, Mahroosh! 💖
+                We Love You, Mahroosh! 💖 Made with love from 'sپھپھو n 'sچاچا
             </h2>
             <p style="font-size: 1.1em; line-height: 1.9; opacity: 0.97;">
-                May your life be filled with endless joy, beautiful moments, and dreams that come true...
+                May your life be filled with endless joy, beautiful moments, and dreams that come true، آمین 😘
             </p>
             <p class="urdu-text" style="font-size: 1.25em; margin-top: 16px; line-height: 2.1; opacity: 0.97;">
-                تمہاری زندگی لامتناہی خوشیوں، خوبصورت لمحات، اور سچے خوابوں سے بھری رہے...
+                ماہ روش زینب آپک زندگی لاتعداد خوشیوں، خوبصورت لمحات، اور سچے خوابوں سے بھری رہے❤️
             </p>
         </div>
     </div>
@@ -947,7 +1018,6 @@
     <!-- Footer -->
     <div class="footer">
         <p>Made with <span class="heart">❤️</span> for Mahroosh Zainab</p>
-        <p class="urdu-text">محبت سے بنایا گیا ماہ روش زینب کے لیے</p>
         <p style="margin-top: 12px; font-size: 0.9em; opacity: 0.85;">6th February 2026</p>
     </div>
 
