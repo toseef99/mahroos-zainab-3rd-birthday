@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Happy 3rd Birthday Mahroosh Zainab! 🎂</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;500;600;700&family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-pink: #FF1493;
+            --secondary-coral: #FF6B6B;
+            --accent-yellow: #FFCC80;
+            --accent-turquoise: #06D6A0;
+            --accent-purple: #9B59B6;
+            --light-cream: #FFF9F0;
+            --text-dark: #2D3436;
+            --text-secondary: #636E72;
+            --gradient-1: linear-gradient(135deg, #FF1493 0%, #FF6B6B 50%, #FFCC80 100%);
+            --gradient-2: linear-gradient(135deg, #06D6A0 0%, #4ECDC4 50%, #45B7D1 100%);
+            --gradient-3: linear-gradient(135deg, #9B59B6 0%, #E056FD 100%);
+            --gradient-4: linear-gradient(135deg, #FFCC80 0%, #FFA502 100%);
+            --card-bg: #FFFFFF;
+            --border-color: #F0F0F0;
+            --header-overlay: rgba(255, 20, 147, 0.52); /* slightly stronger overlay for readability */
+        }
+
+        body {
+            font-family: 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #FFE5EC 0%, #FFF9E6 50%, #E5F9FF 100%);
+            color: var(--text-dark);
+            overflow-x: hidden;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .urdu-text {
+            font-family: 'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', serif;
+            direction: rtl;
+            text-align: right;
+            line-height: 2.2;
+            font-weight: 500;
+        }
+
+        .urdu-text-header {
+            font-family: 'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', serif;
+            color: white;
+            direction: rtl;
+            text-align: center;
+            line-height: 2.8;
+            font-weight: 800;
+            animation: blink 1.5s infinite;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+                         0 0 20px rgba(255, 255, 255, 0.6),
+                         0 0 30px rgba(255, 217, 61, 0.8);
+        }
+
+        @keyframes blink {
+            0%, 100% {
+                opacity: 1;
+                text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+                             0 0 20px rgba(255, 255, 255, 0.6),
+                             0 0 30px rgba(255, 217, 61, 0.8);
+            }
+            50% {
+                opacity: 0.3;
+                text-shadow: 0 0 5px rgba(255, 255, 255, 0.3),
+                             0 0 10px rgba(255, 255, 255, 0.2);
+            }
+        }
+
+        /* Floating particles background */
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .particle {
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            background: radial-gradient(circle, #FF1493, #FFCC80);
+            border-radius: 50%;
+            animation: float 15s infinite;
+            box-shadow: 0 0 10px rgba(255, 20, 147, 0.5);
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) translateX(0); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateY(-100vh) translateX(100px); opacity: 0; }
+        }
+
+        /* Header Section – NOW WITH PHOTO BACKGROUND */
+        .header {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-image: 
+                linear-gradient(to bottom, 
+                    var(--header-overlay) 0%, 
+                    rgba(255, 108, 139, 0.42) 50%, 
+                    rgba(6, 214, 160, 0.20) 100%
+                ),
+                url('images/maharoosh-smile-bg.jpg');
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            clip-path: polygon(0 0, 100% 0, 100% 95%, 50% 100%, 0 95%);
+            z-index: 1;
+            box-shadow: 0 15px 50px rgba(255, 20, 147, 0.4);
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: inherit;
+            filter: blur(2px) brightness(0.93);
+            z-index: -1;
+        }
+
+        .header h1,
+        .header .age,
+        .header h2,
+        .header .date,
+        .header .urdu-text {
+            position: relative;
+            z-index: 2;
+            text-shadow: 4px 4px 12px rgba(0,0,0,0.7), 0 0 20px rgba(0,0,0,0.45);
+        }
+
+        .header h1 {
+            font-family: 'Fredoka', sans-serif;
+            font-size: 2.4em;
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-shadow: 3px 3px 0px rgba(0,0,0,0.2), 5px 5px 0px rgba(255,255,255,0.1);
+            animation: bounce 2s infinite;
+            letter-spacing: 1px;
+            transform: rotate(-2deg);
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .header .age {
+            font-size: 5.5em;
+            font-weight: 900;
+            text-shadow: 4px 4px 0px rgba(0,0,0,0.2), 
+                         8px 8px 0px rgba(255,255,255,0.1),
+                         12px 12px 20px rgba(0,0,0,0.3);
+            letter-spacing: -3px;
+            font-family: 'Fredoka', sans-serif;
+            transform: rotate(-3deg);
+            display: inline-block;
+            animation: wiggle 3s infinite;
+            background: rgba(0,0,0,0.25);
+            padding: 0 20px;
+            border-radius: 16px;
+        }
+
+        @keyframes wiggle {
+            0%, 100% { transform: rotate(-3deg); }
+            25% { transform: rotate(-5deg) scale(1.05); }
+            50% { transform: rotate(-1deg); }
+            75% { transform: rotate(-4deg) scale(1.05); }
+        }
+
+        .header .date {
+            font-size: 1.15em;
+            margin-top: 15px;
+            opacity: 0.95;
+            font-weight: 600;
+            letter-spacing: 1px;
+            font-family: 'Nunito', sans-serif;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        /* Header Content Layout */
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 500px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        .header-left {
+            flex: 1;
+            text-align: right;
+            padding-right: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        .header-left .urdu-birthday {
+            font-family: 'Noto Nastaliq Urdu', serif;
+            font-size: 1.8em;
+            font-weight: 800;
+            line-height: 1.8;
+            color: white;
+            text-shadow: 3px 3px 8px rgba(0,0,0,0.5),
+                         0 0 20px rgba(255, 217, 61, 0.6);
+            transform: rotate(-45deg);
+            transform-origin: center;
+            margin-left: 0px;
+            white-space: nowrap;
+        }
+
+        .header-right {
+            flex: 0 0 auto;
+        }
+
+        .header-right .age {
+            font-size: 6em !important;
+            font-weight: 900;
+            text-shadow: 4px 4px 0px rgba(0,0,0,0.3), 
+                         8px 8px 0px rgba(255,255,255,0.1),
+                         12px 12px 20px rgba(0,0,0,0.4);
+            letter-spacing: -3px;
+            font-family: 'Fredoka', sans-serif;
+            display: inline-block;
+            animation: wiggle 3s infinite;
+            background: rgba(0,0,0,0.3);
+            padding: 10px 25px;
+            border-radius: 20px;
+            margin: 0;
+        }
+
+        /* Container */
+        .container {
+            position: relative;
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 20px;
+            z-index: 1;
+        }
+
+        /* Section Styles */
+        .section {
+            background: var(--card-bg);
+            border-radius: 28px;
+            padding: 30px 24px;
+            margin-bottom: 24px;
+            box-shadow: 8px 8px 0px rgba(255, 20, 147, 0.15),
+                        0 4px 20px rgba(0,0,0,0.1);
+            animation: fadeInUp 0.6s ease-out;
+            border: 3px solid transparent;
+            background-clip: padding-box;
+            position: relative;
+        }
+
+        .section:before {
+            content: '';
+            position: absolute;
+            top: -3px;
+            left: -3px;
+            right: -3px;
+            bottom: -3px;
+            background: var(--gradient-1);
+            border-radius: 28px;
+            z-index: -1;
+            opacity: 0.3;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .section-title {
+            font-size: 1.8em;
+            font-weight: 800;
+            background: #54626F;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 28px;
+            text-align: center;
+            position: relative;
+            padding-bottom: 15px;
+            font-family: 'Fredoka', sans-serif;
+            letter-spacing: 0.5px;
+        }
+
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 6px;
+            background: var(--gradient-4);
+            border-radius: 3px;
+            box-shadow: 0 2px 8px rgba(255, 217, 61, 0.5);
+        }
+
+        /* Timeline Styles */
+        .timeline {
+            position: relative;
+            padding: 20px 0;
+        }
+
+        .timeline:before {
+            content: '';
+            position: absolute;
+            left: 20px;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(to bottom, 
+                var(--primary-pink) 0%, 
+                var(--accent-yellow) 25%,
+                var(--accent-turquoise) 50%,
+                var(--accent-purple) 75%,
+                var(--secondary-coral) 100%);
+            border-radius: 2px;
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-left: 60px;
+            margin-bottom: 40px;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: 10px;
+            top: 0;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #FF1493, #FFCC80);
+            border: 4px solid white;
+            box-shadow: 0 0 0 3px rgba(255, 20, 147, 0.3),
+                        0 4px 12px rgba(255, 20, 147, 0.4);
+            z-index: 1;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); box-shadow: 0 0 0 6px rgba(255, 20, 147, 0.2); }
+        }
+
+        .timeline-date {
+            font-size: 0.8em;
+            color: var(--text-secondary);
+            font-weight: 600;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .timeline-content {
+            background: linear-gradient(135deg, #FFF9F0 0%, #FFE5EC 100%);
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 4px 4px 0px rgba(255, 20, 147, 0.1),
+                        0 2px 12px rgba(0,0,0,0.08);
+            border: 2px solid rgba(255, 20, 147, 0.2);
+        }
+
+        .timeline-content h3 {
+            color: var(--text-dark);
+            margin-bottom: 12px;
+            font-size: 1.15em;
+            font-weight: 700;
+            font-family: 'Fredoka', sans-serif;
+        }
+
+        .timeline-content p {
+            font-size: 0.95em;
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+
+        /* Media Grid */
+        .media-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 16px;
+            margin-top: 20px;
+        }
+
+        .media-item {
+            position: relative;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 6px 6px 0px rgba(255, 217, 61, 0.2),
+                        0 4px 20px rgba(0,0,0,0.12);
+            cursor: pointer;
+            transition: all 0.25s ease;
+            border: 3px solid rgba(255, 217, 61, 0.3);
+        }
+
+        .media-item:hover {
+            transform: scale(1.03);
+            box-shadow: 8px 8px 0px rgba(255, 217, 61, 0.35),
+                        0 6px 24px rgba(0,0,0,0.15);
+        }
+
+        .media-item img, .media-item video {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+        }
+
+        .media-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.85), transparent);
+            color: white;
+            padding: 16px 12px;
+            font-size: 0.92em;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .media-item:hover .media-caption {
+            transform: translateY(0);
+        }
+
+        /* Messages */
+        .message-card {
+            background: var(--card-bg);
+            padding: 24px;
+            border-radius: 24px;
+            margin-bottom: 20px;
+            box-shadow: 6px 6px 0px rgba(0,0,0,0.08);
+            border: 2px solid rgba(255, 217, 61, 0.2);
+            transition: transform 0.2s ease;
+        }
+
+        .message-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .message-card .author {
+            font-family: 'Fredoka', sans-serif;
+            font-size: 1.15em;
+            font-weight: 700;
+            margin-bottom: 12px;
+            background: var(--gradient-2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .message-card .text {
+            font-size: 0.98em;
+            line-height: 1.8;
+            color: var(--text-secondary);
+        }
+
+        /* Stats */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-top: 24px;
+        }
+
+        
+
+        .stat-card {
+            background: var(--card-bg);
+            color: var(--text-dark);
+            padding: 28px 20px;
+            border-radius: 24px;
+            text-align: center;
+            box-shadow: 6px 6px 0px rgba(255, 20, 147, 0.15),
+                        0 4px 16px rgba(0,0,0,0.1);
+            border: 3px solid transparent;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .stat-card:active {
+            transform: scale(0.95) rotate(-1deg);
+        }
+
+        .stat-card:nth-child(1):before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: var(--gradient-1);
+        }
+
+        .stat-card:nth-child(2):before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: var(--gradient-2);
+        }
+
+        .stat-card:nth-child(3):before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: var(--gradient-3);
+        }
+
+        .stat-card:nth-child(4):before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: var(--gradient-4);
+        }
+
+        .stat-card .number {
+            font-size: 3.2em;
+            font-weight: 900;
+            display: block;
+            font-family: 'Fredoka', sans-serif;
+            letter-spacing: -2px;
+            margin-bottom: 5px;
+        }
+
+        .stat-card:nth-child(1) .number {
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .stat-card:nth-child(2) .number {
+            background: var(--gradient-2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .stat-card:nth-child(3) .number {
+            background: var(--gradient-3);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .stat-card:nth-child(4) .number {
+            background: var(--gradient-4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .stat-card .label {
+            font-size: 0.88em;
+            color: var(--text-secondary);
+            margin-top: 8px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            font-family: 'Nunito', sans-serif;
+        }
+
+
+        /* Balloons */
+        .balloon {
+            position: fixed;
+            bottom: -150px;
+            width: 60px;
+            height: 80px;
+            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+            animation: float-up 20s infinite;
+            z-index: 0;
+        }
+
+        .balloon:nth-child(1) { left: 10%; background: var(--gradient-1); animation-delay: 0s; }
+        .balloon:nth-child(2) { left: 30%; background: var(--gradient-2); animation-delay: 3s; }
+        .balloon:nth-child(3) { left: 50%; background: var(--gradient-4); animation-delay: 6s; }
+        .balloon:nth-child(4) { left: 70%; background: var(--gradient-3); animation-delay: 9s; }
+        .balloon:nth-child(5) { left: 90%; background: var(--gradient-1); animation-delay: 12s; }
+
+        @keyframes float-up {
+            0% { bottom: -150px; opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { bottom: 120vh; opacity: 0; }
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 50px 20px;
+            color: white;
+            font-size: 0.95em;
+            background: var(--gradient-3);
+            margin-top: 40px;
+        }
+
+        .footer .heart {
+            color: #ff4757;
+            animation: heartbeat 1.4s infinite;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.25); }
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.92);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            max-width: 94%;
+            max-height: 94%;
+            object-fit: contain;
+            border-radius: 16px;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: white;
+            font-size: 2.5rem;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        /* Music & Share Buttons */
+        .music-control, .share-btn {
+            position: fixed;
+            z-index: 9999;
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .music-control {
+            bottom: 90px;
+            right: 20px;
+            background: var(--gradient-1);
+            color: white;
+        }
+
+        .music-control:hover, .music-control:active {
+            transform: scale(1.15);
+            box-shadow: 0 10px 30px rgba(255,20,147,0.5);
+        }
+
+        .music-control.paused {
+            background: #636e72;
+        }
+
+        .share-btn {
+            bottom: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            color: white;
+        }
+
+        .share-btn:hover, .share-btn:active {
+            transform: scale(1.15);
+            box-shadow: 0 10px 30px rgba(37,211,102,0.5);
+        }
+
+        .share-btn .label {
+            position: absolute;
+            bottom: 80px;
+            right: 0;
+            background: rgba(0,0,0,0.8);
+            color: white;
+            padding: 6px 14px;
+            border-radius: 30px;
+            font-size: 0.85em;
+            white-space: nowrap;
+            opacity: 0;
+            transition: opacity 0.3s;
+            pointer-events: none;
+        }
+
+        .share-btn:hover .label {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Floating balloons -->
+    <div class="balloon"></div>
+    <div class="balloon"></div>
+    <div class="balloon"></div>
+    <div class="balloon"></div>
+    <div class="balloon"></div>
+
+    <!-- Particles -->
+    <div class="particles" id="particles"></div>
+
+    <!-- Music Player -->
+    <button class="music-control" id="musicToggle" title="Birthday Song">🎵</button>
+
+    <!-- Hidden Audio with Multiple Songs -->
+    <audio id="birthdaySong" preload="auto">
+        <source src="images/song1.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- Share Button -->
+    <a href="https://wa.me/?text=Happy%203rd%20Birthday%20Mahroosh%20Zainab!%20🎂❤️%20جنم%20دن%20مبارک%20ہو!%20See%20her%20beautiful%20birthday%20page%20full%20of%20love%20and%20memories%3A%20"
+       class="share-btn" target="_blank" rel="noopener noreferrer">
+        💌
+        <span class="label">Share with Family</span>
+    </a>
+
+    <!-- Header – with your niece smiling photo as background -->
+    <div class="header">
+        <h1>🎉 Happy Birthday 🎉</h1>
+        
+        <!-- Content layout with left and right -->
+        <div class="header-content">
+            <div class="header-left">
+                <div class="urdu-birthday">
+                    تیسری سالگرہ<br>مبارک
+                </div>
+            </div>
+            <div class="header-right">
+                <div class="age">3</div>
+            </div>
+        </div>
+        
+        <h2 style="font-family: 'Fredoka', sans-serif; font-size: 2.2em; margin-top: 15px; font-weight: 700; letter-spacing: 1px; text-shadow: 3px 3px 0px rgba(0,0,0,0.15);">
+            Mahroosh Zainab
+        </h2>
+        <p class="date">6th February 2026</p>
+        <p class="urdu-text-header" style="font-size: 1.6em; margin-top: 15px;">
+            جنم دن مبارک ہو، ماہ روش زینب 🥰
+        </p>
+    </div>
+
+
+    <div class="container">
+
+        <!-- Stats -->
+        <div class="section">
+            <h2 class="section-title">✨ About Our Little Star ✨</h2>
+            <div class="stats-grid">
+                <div class="stat-card"><span class="number">3</span><span class="label">Years Old!</span></div>
+                <div class="stat-card"><span class="number">1095</span><span class="label">Days of Joy</span></div>
+                <div class="stat-card"><span class="number">∞</span><span class="label">Smiles Given</span></div>
+                <div class="stat-card"><span class="number">💕</span><span class="label">Love Received</span></div>
+            </div>
+        </div>
+
+        <!-- Timeline -->
+        <div class="section">
+            <h2 class="section-title">👸 Journey Through The Years 👸</h2>
+            <div class="timeline">
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">6th February 2023</div>
+                    <div class="timeline-content">
+                        <h3>🌟 Welcome to the World!</h3>ِ
+                        <p class="urdu-text" style="margin-top: 1px;"> چاچا عدہل کے ساتھ ❤️ </p>
+                        <!-- <p>The day our little princess arrived and filled our lives with endless joy and love.</p> -->
+                        <div class="media-grid" style="margin-top: 20px;">
+                            <div class="media-item" onclick="openModal(this)">
+                                <img src="images/photo1.jpg" alt="First Birthday Celebration">
+                                <div class="media-caption"><strong>First Day 👶</strong><p class="urdu-text">زندگی کا پہلا دن</p></div></div>
+                            <div class="media-item" onclick="openModal(this)">
+                                <img src="images/photo2.jpg" alt="First Birthday Celebration">
+                                <div class="media-caption"><strong>With Family ❤️</strong><p class="urdu-text">خاندان کے ساتھ</p></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">First Year</div>
+                    <div class="timeline-content">
+                        <h3>👶 First Steps & First Words</h3>
+                        <p>From tiny giggles to first steps, every moment was magical. Your first word made our hearts melt!</p>
+                        <p class="urdu-text" style="margin-top: 10px;">پہلے قدم، پہلے الفاظ - ہر لمحہ جادوئی تھا۔</p>
+                        <div class="media-grid" style="margin-top: 20px;">
+                            <div class="media-item" onclick="openModal(this)"><div class="placeholder"></div><div class="media-caption"><strong>First Birthday 🎂</strong><p class="urdu-text">پہلی سالگرہ</p></div></div>
+                            <div class="media-item" onclick="openModal(this)"><div class="placeholder"></div><div class="media-caption"><strong>Learning to Walk 👣</strong><p class="urdu-text">چلنا سیکھنا</p></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">Second Year</div>
+                    <div class="timeline-content">
+                        <h3>🎨 Discovering the World</h3>
+                        <p>Running around, exploring everything, asking "why?" a million times, and making us laugh every single day!</p>
+                        <p class="urdu-text" style="margin-top: 10px;">دنیا کو دریافت کرنا، کھیلنا، اور ہمیں ہر دن ہنسانا!</p>
+                        <div class="media-grid" style="margin-top: 20px;">
+                            <div class="media-item" onclick="openModal(this)"><div class="placeholder"></div><div class="media-caption"><strong>Park Fun 🌳</strong><p class="urdu-text">پارک میں کھیلنا</p></div></div>
+                            <div class="media-item" onclick="openModal(this)"><div class="placeholder"></div><div class="media-caption"><strong>Second Birthday 🎉</strong><p class="urdu-text">دوسری سالگرہ</p></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">Third Year</div>
+                    <div class="timeline-content">
+                        <h3>🌺 Growing & Glowing</h3>
+                        <p>Now you're THREE! So smart, so funny, so full of love. You make every day brighter just by being you!</p>
+                        <p class="urdu-text" style="margin-top: 10px;">اب تم تین سال کی ہو! بہت ہوشیار، بہت پیاری، اور محبت سے بھری ہوئی۔</p>
+                        <div class="media-grid" style="margin-top: 20px;">
+                            <div class="media-item" onclick="openModal(this)"><div class="placeholder"></div><div class="media-caption"><strong>Recent Adventures 🌟</strong><p class="urdu-text">حالیہ مہم جوئی</p></div></div>
+                            <div class="media-item" onclick="openModal(this)"><div class="placeholder"></div><div class="media-caption"><strong>Beautiful Smile 😊</strong><p class="urdu-text">خوبصورت مسکراہٹ</p></div></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Messages -->
+        <div class="section">
+            <h2 class="section-title">💌 Birthday Wishes 💌</h2>
+
+            <div class="message-card">
+                <div class="author">Mommy & Daddy 👨‍👩‍👧</div>
+                <div class="text">My dearest Mahroosh, you are our greatest blessing...</div>
+                <div class="urdu-text" style="margin-top: 12px;">ہماری پیاری ماہ روش، تم ہماری سب سے بڑی نعمت ہو...</div>
+            </div>
+
+            <div class="message-card">
+                <div class="author">Nana & Nani 👴👵</div>
+                <div class="text">Our sweet granddaughter, you bring so much sunshine...</div>
+                <div class="urdu-text" style="margin-top: 12px;">ہماری پیاری پوتی، تم ہماری زندگی میں بہت خوشیاں لاتی ہو...</div>
+            </div>
+
+            <div class="message-card">
+                <div class="author">All Your Family 💝</div>
+                <div class="text">Happy Birthday to the most adorable 3-year-old!...</div>
+                <div class="urdu-text" style="margin-top: 12px;">سب سے پیاری تین سال کی بچی کو سالگرہ مبارک!...</div>
+            </div>
+        </div>
+
+        <!-- Final Love Message -->
+        <div class="section" style="background: var(--gradient-2); color: white; text-align: center; border: none; box-shadow: 8px 8px 0px rgba(6,214,160,0.35);">
+            <h2 style="font-family: 'Fredoka', sans-serif; font-size: 2.1em; margin-bottom: 20px; font-weight: 800;">
+                We Love You, Mahroosh! 💖
+            </h2>
+            <p style="font-size: 1.1em; line-height: 1.9; opacity: 0.97;">
+                May your life be filled with endless joy, beautiful moments, and dreams that come true...
+            </p>
+            <p class="urdu-text" style="font-size: 1.25em; margin-top: 16px; line-height: 2.1; opacity: 0.97;">
+                تمہاری زندگی لامتناہی خوشیوں، خوبصورت لمحات، اور سچے خوابوں سے بھری رہے...
+            </p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>Made with <span class="heart">❤️</span> for Mahroosh Zainab</p>
+        <p class="urdu-text">محبت سے بنایا گیا ماہ روش زینب کے لیے</p>
+        <p style="margin-top: 12px; font-size: 0.9em; opacity: 0.85;">6th February 2026</p>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal" id="modal" onclick="closeModal()">
+        <span class="modal-close">×</span>
+        <img class="modal-content" id="modal-img" alt="Full size image">
+    </div>
+
+    <script>
+        // Particles
+        const particlesContainer = document.getElementById('particles');
+        for (let i = 0; i < 24; i++) {
+            const p = document.createElement('div');
+            p.className = 'particle';
+            p.style.left = Math.random() * 100 + '%';
+            p.style.animationDelay = Math.random() * 15 + 's';
+            p.style.animationDuration = (Math.random() * 10 + 12) + 's';
+            particlesContainer.appendChild(p);
+        }
+
+        // Modal
+        function openModal(el) {
+            const img = el.querySelector('img');
+            if (img) {
+                document.getElementById('modal').classList.add('active');
+                document.getElementById('modal-img').src = img.src;
+            }
+        }
+
+        function closeModal() {
+            document.getElementById('modal').classList.remove('active');
+        }
+
+        // Music Player with Multiple Songs
+        const audio = document.getElementById('birthdaySong');
+        const musicBtn = document.getElementById('musicToggle');
+        let isPlaying = false;
+        
+        // Playlist - add your song files here
+        const playlist = [
+            'images/song1.mp3',
+            // 'images/song2.mp3',
+            // 'images/song3.mp3',
+            // 'images/song4.mp3'
+        ];
+        let currentSongIndex = 0;
+
+        // Function to load and play a song
+        function playSong(index) {
+            audio.src = playlist[index];
+            audio.load();
+            audio.volume = 0.4;
+            return audio.play();
+        }
+
+        // When current song ends, play next one
+        audio.addEventListener('ended', () => {
+            currentSongIndex = (currentSongIndex + 1) % playlist.length;
+            playSong(currentSongIndex);
+        });
+
+        musicBtn.addEventListener('click', () => {
+            if (isPlaying) {
+                audio.pause();
+                musicBtn.classList.add('paused');
+                musicBtn.textContent = '🎵';
+                isPlaying = false;
+            } else {
+                playSong(currentSongIndex).then(() => {
+                    musicBtn.classList.remove('paused');
+                    musicBtn.textContent = '🔇';
+                    isPlaying = true;
+                }).catch((error) => {
+                    console.log("Playback error:", error);
+                    alert("Could not play music. Please check if song files exist in images folder.");
+                });
+            }
+        });
+
+        // Scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.section').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'all 0.7s ease-out';
+            observer.observe(el);
+        });
+
+        // Prevent double-tap zoom on mobile
+        let lastTouchEnd = 0;
+        document.addEventListener('touchend', e => {
+            const now = Date.now();
+            if (now - lastTouchEnd <= 300) e.preventDefault();
+            lastTouchEnd = now;
+        }, { passive: false });
+    </script>
+</body>
+</html>
